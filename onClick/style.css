@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+
+.container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clickme{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
+    background-color: rgb(189, 238, 133);
+}

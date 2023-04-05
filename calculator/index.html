@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <input type="text" id="input" onkeypress="handleKeyPress(event)" onkeyup="handleKeyUp(event)">
+    <br>
+    <button onclick="calculate()">Calculate</button>
+    <br>
+    <span id="result"></span>
+    <script>
+      let input = '';
+      let result = 0;
+      
+      function handleKeyPress(event) {
+        if (!/[0-9+\-*/]/.test(event.key)) {
+          event.preventDefault();
+        }
+      }
+      
+      function handleKeyUp(event) {
+        input = event.target.value;
+      }
+      
+      function calculate() {
+        try {
+          result = eval(input);
+          document.getElementById('result').innerHTML = result;
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>
